@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editNum1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -42,61 +42,103 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="2dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="33dp"
         android:text="Ingrese Numero 2"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber2" />
+        app:layout_constraintBottom_toTopOf="@+id/editNum2"
+        app:layout_constraintStart_toStartOf="@+id/editNum2" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editNum2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:layout_marginBottom="255dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginBottom="216dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/btnRegresarCalc"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginBottom="57dp"
-        android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnSumar"
+        app:layout_constraintEnd_toEndOf="@+id/editNum1"
+        app:layout_constraintStart_toStartOf="@+id/editNum1"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="99dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="29dp"
         android:text="Resultado: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/textResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textResultado" />
 
     <TextView
         android:id="@+id/textResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="130dp"
+        android:text="     "
         android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegresarCalc"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        app:layout_constraintTop_toTopOf="@+id/editNum2" />
 
     <Button
         android:id="@+id/btnRegresarCalc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="7dp"
         android:onClick="regresar"
         android:text="Regresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="1dp"
+        android:onClick="sumar"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRestar"
+        app:layout_constraintEnd_toStartOf="@+id/btnRestar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="restar"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintStart_toEndOf="@+id/btnSumar" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="31dp"
+        android:onClick="multiplicar"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegresarCalc"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivision"
+        app:layout_constraintStart_toEndOf="@+id/btnRestar" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="dividir"
+        android:text="/"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMultiplicar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
