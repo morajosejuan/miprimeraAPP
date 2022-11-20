@@ -24,7 +24,7 @@ public class IndexActivity extends AppCompatActivity {
         startActivity(calc);
     }
     public void calculadoraLista(View view){
-        Intent calclista =new Intent(IndexActivity.this,CalculaListaActivity.class);
+        Intent calclista =new Intent(IndexActivity.this,CalulcadoraSelectActivity.class);
         startActivity(calclista);
     }
 }

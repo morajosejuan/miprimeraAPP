@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">PrimerApp</string>
+    <string name="app_name">Primera Calculadora APP</string>
     <string name="bienvenidos">Bienvenidos</string>
+    <string-array name="operacciones">
+        <item>Seleccione...</item>
+        <item>Sumar</item>
+        <item>Restar</item>
+        <item>Multiplicar</item>
+        <item>Dividir</item>
+    </string-array>
 </resources>
